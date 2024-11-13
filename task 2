@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    double amount, discount = 0.0, finalAmount;
+
+    
+    printf("Enter the amount spent: $");
+    scanf("%lf", &amount);
+
+    
+    if (amount >= 100) {
+        discount = amount * 0.10;  // 10% discount
+
+        if (amount >= 500) {
+            discount += amount * 0.05;  // Additional 5% discount
+        }
+    }
+
+    
+    finalAmount = amount - discount;
+
+    
+    printf("Original Amount: $%.2lf\n", amount);
+    printf("Discount Applied: $%.2lf\n", discount);
+    printf("Final Amount to Pay: $%.2lf\n", finalAmount);
+
+    return 0;
+}
